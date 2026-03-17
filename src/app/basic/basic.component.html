@@ -1,10 +1,13 @@
-<p>basic works!</p>
+<!-- <p>basic works!</p>
 <br />
+
+----1)Interpolation (data binding)----
+
 {{ name }} <br />
 <h3>{{ firstName }} {{ lastname }}</h3>
 <h4>{{ num }}</h4>
 <h2>{{ message() }}</h2>
-<p>{{ age >= 18 ? "can vote" : "cannot vote" }}</p>
+<p>{{ age >= 18 ? "can vote" : "cannot vote" }}</p>  ?->ternary operator
 <br />
 <p>{{ student.name }}</p>
 <p>{{ student.age }}</p>
@@ -12,4 +15,37 @@
 <br />
 <h3>Second color:{{ colors[1] }}</h3>
 <br />
-<h3>Third color:{{ colors[2] }}</h3>
+<h3>Third color:{{ colors[2] }}</h3> -->
+
+<!-- 2)Property binding (data binding )-->
+<!-- <br />
+<input type="text" [value]="name1" /> <br /><br />
+
+<img [src]="img" alt="" height="400px" width="400px" /> <br /><br />
+
+<a [href]="link">Bootstrap</a><br /><br />
+
+<img [src]="img1" alt="" height="200px" width="200px" /> <br /> -->
+
+<!-- EVENT BINDING ->html to ts -->
+
+<!-- <button (click)="show()">Click</button>
+<input type="text" #username /> -->
+
+<!-- #username = template literal variable -->
+
+<!-- <button (click)="display(username.value)">Click</button><br />
+<br />
+<input type="text" #uname />
+<button (click)="bind(uname.value)">Click</button>
+<h3>{{ myname }}</h3> -->
+
+<h4>{{ msg }}</h4>
+<button (mouseover)="mouse()" (mouseleave)="mouseout()">Click</button
+><br /><br />
+<button (click)="toggle()">{{ view ? "hide" : "show" }}</button><br /><br />
+<!-- hide show kk instaed we can use toggle button /static names -->
+
+<button (click)="counting()">Increment</button><br /><br />
+
+<h3>{{ count }}</h3>

@@ -1,1 +1,17 @@
-<p>first works!</p>
+<!-- 2 way data binding  -->
+<!-- simultaneous action taking place -->
+<!-- <br /><br />
+<input type="text" [(ngModel)]="name1" />
+
+<button (click)="fun()">Click</button>
+<h2>{{ name1 }}</h2> -->
+
+<input type="number" name="num1" [(ngModel)]="num1" /> <br /><br />
+<input type="number" name="num2" [(ngModel)]="num2" /> <br /><br />
+
+<button class="btn btn-primary" (click)="addition()">+</button>
+<button class="btn btn-secondary" (click)="substraction()">-</button>
+<button class="btn btn-danger" (click)="multiplication()">*</button>
+<button class="btn btn-warning" (click)="division()">/</button>
+
+<h4>{{ result }}</h4>
