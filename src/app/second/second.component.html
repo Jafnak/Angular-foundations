@@ -1,0 +1,62 @@
+<!-- <div *ngIf="data; else elsedata">Welcome...</div>
+
+elsedata is given below and #elsedata is template referance
+ <ng-template #elsedata> the value of data is false </ng-template> -->
+
+<!-- <div *ngIf="value == 1; else checkTwo">Value is 1</div>
+<ng-template #checkTwo>
+  <div *ngIf="value == 2; else invalid">Value is Two</div>
+</ng-template>
+<ng-template #invalid> Value is something else </ng-template> -->
+
+<!-- another method  -->
+<!-- 
+<div *ngIf="data; then truecase; else falsecase"></div>
+<ng-template #truecase> Value of data is true </ng-template>
+
+<ng-template #falsecase> Value of data is false </ng-template> -->
+
+<!-- ngfor -->
+
+<!-- <ul
+  *ngFor="
+    let i of fruits;
+    index as j;
+    first as f;
+    last as l;
+    even as e;
+    odd as o
+  "
+>
+  <li>{{ i }} {{ j }} {{ f }} {{ l }} {{ e }} {{ o }}</li>
+</ul>
+
+ Hw: numbers:number[]=[-1,2,-5,8,-3,6,-7]  -pick only positive numbers -->
+<!-- <div *ngFor="let i of numbers">
+  <p *ngIf="i >= 0">Positive number:{{ i }}</p> -->
+<!-- <ng-template #elsedata>Negative number:{{ i }}</ng-template> -->
+<!-- </div>  -->
+
+<!-- <div [ngSwitch]="day">
+  <div *ngSwitchCase="1">Sunday</div>
+  <div *ngSwitchCase="2">Monday</div>
+  <div *ngSwitchCase="3">Tuesaday</div>
+  <div *ngSwitchCase="4">Wednesday</div>
+  <div *ngSwitchCase="5">Thursday</div>
+  <div *ngSwitchCase="6">Friday</div>
+  <div *ngSwitchCase="7">saturday</div>
+  <div *ngSwitchDefault>Invalid number</div>
+</div> -->
+
+<select name="" id="" [(ngModel)]="choice">
+  <option value="morning">Morning</option>
+  <option value="afternoon">Afternoon</option>
+  <option value="night">Night</option>
+</select>
+
+<div [ngSwitch]="choice">
+  <div *ngSwitchCase="'morning'">Morning Shift</div>
+  <div *ngSwitchCase="'afternoon'">Afternoon Shift</div>
+  <div *ngSwitchCase="'night'">Night Shift</div>
+  <div *ngSWitchDefault>Select a time</div>
+</div>
