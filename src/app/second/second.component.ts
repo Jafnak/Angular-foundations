@@ -19,5 +19,13 @@ export class SecondComponent {
 
   choice=""
 
+  role=""
+
+  value1="style2"
+  value2="style3"
+  value3="style4"
+
+  object:{id:number,name:string,dob:string,salary:number}={id:100,name:"Bob",dob:"2002-12-30",salary:35000}
+
 
 }

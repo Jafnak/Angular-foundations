@@ -1,0 +1,85 @@
+<!-- <p>react works!</p>
+  -->
+<form [formGroup]="form1" action="" (ngSubmit)="register()">
+  <input
+    type="text"
+    name="name"
+    placeholder="NAME"
+    class="form-control"
+    formControlName="name"
+  />
+  <div
+    *ngIf="form1.get('name')?.invalid && form1.get('name')?.touched"
+    style="color: red"
+  >
+    <div *ngIf="form1.get('name')?.errors?.['required']">
+      *this field is required
+    </div>
+    <div *ngIf="form1.get('name')?.errors?.['minlength']">
+      *min 2 letters needed
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <input
+    type="age"
+    name="age"
+    placeholder="AGE"
+    class="form-control"
+    formControlName="age"
+  />
+  <div *ngIf="form1.get('age')?.invalid && form1.get('age')?.touched">
+    <div *ngIf="form1.get('age')?.errors?.['required']">
+      *this field is required
+    </div>
+    <div *ngIf="form1.get('age')?.errors?.['min']">*min age should be 18</div>
+    <div *ngIf="form1.get('age')?.errors?.['max']">*max age should be 50</div>
+  </div>
+  <br /><br />
+  <input
+    type="email"
+    name="email"
+    placeholder="EMAIL"
+    class="form-control"
+    formControlName="email"
+  />
+  <div *ngIf="form1.get('email')?.invalid && form1.get('email')?.touched">
+    <div *ngIf="form1.get('email')?.errors?.['required']">
+      *this field is required
+    </div>
+    <div *ngIf="form1.get('email')?.errors?.['email']">
+      8enter a valid email
+    </div>
+  </div>
+  <br />
+  <br />
+  <input
+    type="password"
+    name="password"
+    placeholder="PASSWORD"
+    class="form-control"
+    formControlName="password"
+  />
+  <div *ngIf="form1.get('password')?.invalid && form1.get('password')?.touched">
+    <div *ngIf="form1.get('password')?.errors?.['required']">
+      *this field is required
+    </div>
+    <div *ngIf="form1.get('password')?.errors?.['minlength']">
+      *min length must be 4
+    </div>
+    <div *ngIf="form1.get('password')?.errors?.['maxlength']">
+      maximum length must be 6
+    </div>
+  </div>
+  <br />
+  <br />
+  <input
+    type="submit"
+    value="REGISTER"
+    class="btn btn-primary"
+    [disabled]="form1.invalid"
+  />
+  <br />
+  <br />
+</form>

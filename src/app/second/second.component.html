@@ -48,7 +48,7 @@ elsedata is given below and #elsedata is template referance
   <div *ngSwitchDefault>Invalid number</div>
 </div> -->
 
-<select name="" id="" [(ngModel)]="choice">
+<!-- <select name="" id="" [(ngModel)]="choice">
   <option value="morning">Morning</option>
   <option value="afternoon">Afternoon</option>
   <option value="night">Night</option>
@@ -59,4 +59,52 @@ elsedata is given below and #elsedata is template referance
   <div *ngSwitchCase="'afternoon'">Afternoon Shift</div>
   <div *ngSwitchCase="'night'">Night Shift</div>
   <div *ngSWitchDefault>Select a time</div>
-</div>
+</div> -->
+
+<!-- <button (click)="role = 'admin'">Admin</button>
+<button (click)="role = 'manager'">Manager</button>
+<button (click)="role = 'staff'">Staff</button>
+
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'admin'">Welcome to admin dashboard</div>
+  <div *ngSwitchCase="'manager'">Welcome to Manager Dashboard</div>
+  <div *ngSwitchCase="'staff'">Welcome to staff dashboard</div>
+  <div *ngSwitchDefault>Choose a role</div>
+</div> -->
+
+<!-- <h1 [ngStyle]="{ color: 'orange' }">Welcome to Angular...</h1>
+<h1 [ngStyle]="{ color: 'green', 'background-color': 'yellow' }">
+  Welcome to Angular...
+</h1>
+<h1 [ngClass]="'style1'">Welcome to Angular...</h1>
+<h1 [ngClass]="'value1'">Welcome to Angular...</h1>
+<h1 [ngClass]="[value2, value3]">Welcome....</h1>
+
+<h3>{{ object | json }}</h3>
+<h3>{{ object.id }}</h3>
+<h3>{{ object.name }}</h3>
+<h3>{{ object.dob }}</h3>
+<h3>{{ object.salary }}</h3>
+<br /><br />
+
+<h4>{{ object.name | uppercase }}</h4>
+<h4>{{ object.name | lowercase }}</h4>
+<h4>{{ object.name | titlecase }}</h4>
+
+<h4>{{ object.salary | currency }}</h4>
+<h4>{{ object.salary | currency: "INR" }}</h4>
+<h4>{{ object.salary | currency: "INR" : "code" }}</h4>
+
+<h4>{{ object.dob | date }}</h4>
+<h4>{{ object.dob | date: "MM" }}</h4>
+<h4>{{ object.dob | date: "MMMM" }}</h4>
+<h4>{{ object.dob | date: "dd" }}</h4>
+<h4>{{ object.dob | date: "yy" }}</h4>
+<h4>{{ object.dob | date: "yyyy" }}</h4>
+<h4>{{ object.dob | date: "MMMM" | uppercase }}</h4> -->
+
+<!-- <h3>{{ 75 | pipe1 }}</h3>
+<h3>{{ 35 | pipe1 }}</h3>
+
+<h2>{{ "9878546783" | maskphone }}</h2> -->
+<p>{{ object.name | pipe2: object.salary : object.dob : object.id }}</p>
